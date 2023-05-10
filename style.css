@@ -98,9 +98,10 @@ img {
 100% {
     transform: scaleX(1) scaleY(1) rotate(360deg);
 }
+
 }
   
-
+/* ============== DESKTOP =================== */
 
 /* ------ HEADER --------*/
 
@@ -164,29 +165,6 @@ img {
 
 .header__btn:hover::after {
     width: 100%;
-}
-
-
-
-@media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .header__list {
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .header__btn {
-        background-color: rgb(245, 245, 245);
-        padding: 10px;
-        border-radius: 6px;
-        gap: 20px;
-    }
-    
-
 }
 
 /* -------- INTRODUÇÃO ------------*/
@@ -255,42 +233,7 @@ img {
     transition: .3s;
 }
 
-@media (max-width: 1000px) {
-    .ui__display--md-none {
-        display: none;
-    }
-    
-    .ui__display--md-block {
-        display: block;
-    }
 
-    .main__content h1 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 800px) {
-    .ui__display--sm-none {
-        display: none;
-    }
-
-    .ui__display--sm-block {
-        display: block;
-    }
-    
-    
-}
-
-@media (max-width: 500px) {
-    .ui__display--xs-none {
-        display: none;
-    }
-    
-    .ui__display--xs-block {
-        display: none;
-    }
-
-}
 
 /* -------  EXPERIENCIA ----------- */
 
@@ -312,7 +255,6 @@ img {
     font-size: 20px;
     margin-bottom: 30px;
     color: #525252;
-    
 }
 
 .exp__text span {
@@ -340,7 +282,6 @@ img {
     margin-bottom: 20px;
     border-radius: 4px;
     position: relative;
-    
 }
 
 .empresa::before {
@@ -352,7 +293,6 @@ img {
     position: absolute;
     top: 20px;
     left: -4px;
-
 }
 
 .empresa-ano {
@@ -395,40 +335,6 @@ img {
     padding: 5px 10px;
 }
 
-@media (max-width: 800px) {
-    .experiencia {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        
-    }
-    .experiencia .subtitulo {
-        font-size: 60px;
-        max-width: 100%;
-        color: #8d8989e7;
-        text-transform: capitalize;
-    }
-}
-
-@media (max-width: 500px) {
-    .empresa {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .empresa-texto {
-        margin-inline: auto;
-    }
-
-    .empresa-skills {
-        margin-top: 10px;
-        gap: 0px;
-    }
-
-    .empresa-skills li {
-        margin-inline: auto;
-        margin-top: 10px;
-    }
-}
 
 /* -------- PROJETOS ------------*/
 
@@ -552,29 +458,6 @@ img {
 	font-size: 20px;
 }
 
-
-@media (max-width: 650px) {
-
-.projetos {
-    grid-template-columns: 1fr;
-}
-
-.projetos-title h2 {
-    font-size: 60px;
-    max-width: 100%;
-}
-
-
-}
-
-@media (max-width: 450px) {
-    .projetos-realizados .card {
-        width: 100%;
-        max-width: 300px;
-        margin: 20px auto;
-    }
-}
-
 /*------------ CONTATO ------------ */
 
 #contato {
@@ -612,12 +495,133 @@ img {
     margin-right: 10px;
 }
 
+
+
+
+/* ============== BREAKPOINT =================== */
+
+
+@media (max-width: 1000px) {
+    .ui__display--md-none {
+        display: none;
+    }
+    
+    .ui__display--md-block {
+        display: block;
+    }
+
+    .main__content h1 {
+        font-size: 30px;
+    }
+}
+
+
+
+/* ============== BREAKPOINT =================== */
+
 @media (max-width: 800px) {
+    .ui__display--sm-none {
+        display: none;
+    }
+
+    .ui__display--sm-block {
+        display: block;
+    }
+
+    .experiencia {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        
+    }
+    .experiencia .subtitulo {
+        font-size: 60px;
+        max-width: 100%;
+        color: #8d8989e7;
+        text-transform: capitalize;
+    }
+
     .contato-container {
         grid-template-columns: 1fr;
     }
     
     .contato-list a {
         margin-right: 15px;
+    }
+}
+
+
+/* ============== BREAKPOINT =================== */
+
+@media (max-width: 650px) {
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header__list {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .header__btn {
+        background-color: rgb(245, 245, 245);
+        padding: 10px;
+        border-radius: 6px;
+        gap: 20px;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos-title h2 {
+        font-size: 60px;
+        max-width: 100%;
+    }
+
+}
+
+/* ============== BREAKPOINT =================== */
+
+
+@media (max-width: 500px) {
+    .ui__display--xs-none {
+        display: none;
+    }
+    
+    .ui__display--xs-block {
+        display: none;
+    }
+
+    .empresa {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .empresa-texto {
+        margin-inline: auto;
+    }
+
+    .empresa-skills {
+        margin-top: 10px;
+        gap: 0px;
+    }
+
+    .empresa-skills li {
+        margin-inline: auto;
+        margin-top: 10px;
+    }
+}
+
+
+/* ============== BREAKPOINT =================== */
+
+
+@media (max-width: 450px) {
+    .projetos-realizados .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto;
     }
 }
